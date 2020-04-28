@@ -1,0 +1,22 @@
+body {
+  font-family: HelveticaNow;
+  margin: 0;
+}
+
+@font-face {
+  font-family: HelveticaNow;
+  src: url('/fonts/Now-Bold.woff2') format('woff2');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: HelveticaNow;
+  src: url('/fonts/Now-Medium.woff2') format('woff2');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: HelveticaNow;
+  src: url('/fonts/Now-Regular.woff2') format('woff2');
+  font-weight: 400;
+}
