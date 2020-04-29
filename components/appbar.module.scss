@@ -1,0 +1,27 @@
+.wrapper {
+  display: flex;
+  width: 100vw;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0px;
+  padding-top: 5px;
+  padding-bottom: 25px;
+
+  background-color: var(--color-alpha);
+}
+
+.button {
+  transition: background-color 0.2s ease-out;
+  border-radius: 15px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 15px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: rgba(#fff, 0.25);
+}

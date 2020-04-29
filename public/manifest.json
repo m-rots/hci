@@ -1,0 +1,10 @@
+{
+  "short_name": "Ganzensport",
+  "name": "Ganzensport",
+  "description": "A fun fitness app",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/",
+  "theme_color": "#7341E7",
+  "background_color": "#7341E7"
+}

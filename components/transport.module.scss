@@ -1,0 +1,47 @@
+.wrapper {
+  margin: 10px 0 50px;
+  display: flex;
+  flex-direction: row;
+}
+
+.button {
+  transition: width .2s ease-out;
+
+  width: 50%;
+  margin: 0 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100px;
+  background-color: var(--color-beta);
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+
+  span {
+    color: white;
+    font-size: 20px;
+  }
+}
+
+@media (max-height: 600px) {
+  .wrapper {
+    margin: 0 0 30px;
+  }
+}
+
+.selected {
+  width: 70%;
+  background-color: var(--color-psi);
+  
+  span {
+    color: black;
+  }
+}
+
+.unselected {
+  width: 30%;
+}

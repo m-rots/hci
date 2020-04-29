@@ -1,50 +1,53 @@
 import { NextPage } from 'next';
 import Title from '../components/title';
 import Person from '../components/person';
-import Friends, { Friend } from '../components/friends';
+import Friends from '../components/friends';
 import Page from '../components/page';
 
-const friends: Friend[] = [
+const friends = [
+  {
+    name: 'Tha storminator',
+    points: 169,
+    picture: '/images/storm.jpeg'
+  },
+  {
+    name: 'Rent Hasfelt',
+    points: 148,
+    picture: '/images/rens.jpeg'
+  },
   {
     name: 'Wiskunde D',
-    description: '1st place - 200 points',
+    points: 200,
     picture: '/images/alex.jpeg'
   },
   {
     name: 'Jay9',
-    description: '2nd place - 180 points',
+    points: 180,
     picture: '/images/jeanine.jpeg'
   },
   {
-    name: 'Tha storminator',
-    description: '3rd place - 169 points',
-    picture: '/images/storm.jpeg'
-  },
-  {
     name: 'Ka-Ho',
-    description: '4th place - 152 points',
+    points: 152,
     picture: '/images/ka-ho.jpeg'
   },
-  {
-    name: 'Rent Hasfelt',
-    description: '5th place - 148 points',
-    picture: '/images/rens.jpeg'
-  },
-]
+];
+
+const sortedFriends = friends.sort((a, b) => b.points - a.points);
+const friendsWithPosition = sortedFriends.map((friend, index) => ({
+  ...friend,
+  position: index + 1,
+}));
 
 const page: NextPage = () => {
 
   return (
-    <Page>
-      <Title>Leader<wbr/>board</Title>
-      <Person {...friends[2]} />
-      <Friends friends={friends} />
-      <style jsx global>{`
-        body {
-          background-color: #99E1D9;
-        }
-      `}</style>
-    </Page>
+    <>
+      <Page scrollable>
+        <Title>Leader<wbr/>board</Title>
+        <Person {...friendsWithPosition[2]} />
+        <Friends friends={friendsWithPosition} />
+      </Page>
+    </>
   )
 }
 

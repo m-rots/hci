@@ -1,5 +1,16 @@
 .page {
+  background-color: var(--color-alpha);
   padding: 0 20px;
   max-width: 450px;
   margin: 0 auto;
+
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.scrollable {
+  margin: 0 auto 50px;
 }

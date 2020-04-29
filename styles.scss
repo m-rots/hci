@@ -1,4 +1,6 @@
 body {
+  color: white;
+  background-color: var(--color-alpha);
   font-family: HelveticaNow;
   margin: 0;
 }
@@ -7,16 +9,27 @@ body {
   font-family: HelveticaNow;
   src: url('/fonts/Now-Bold.woff2') format('woff2');
   font-weight: 700;
+  font-display: swap;
 }
 
 @font-face {
   font-family: HelveticaNow;
   src: url('/fonts/Now-Medium.woff2') format('woff2');
   font-weight: 500;
+  font-display: swap;
 }
 
 @font-face {
   font-family: HelveticaNow;
   src: url('/fonts/Now-Regular.woff2') format('woff2');
   font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  --color-alpha: #7341E7;
+  --color-beta: #673FC5;
+  --color-gamma: #97E0FA;
+  --color-psi: #FEDC83;
+  --color-omega: #D183C9;
 }

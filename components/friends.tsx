@@ -5,7 +5,8 @@ import styles from './friends.module.scss';
 
 export type Friend = {
   name: string
-  description: string
+  position: number
+  points: number
   picture: string
 }
 
