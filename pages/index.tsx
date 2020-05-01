@@ -10,7 +10,7 @@ const page: NextPage = () => {
 
   return (
     <>
-      <Page>
+      <Page title="Workout">
         <Title>Your workout</Title>
         <Transport />
         <Duration />

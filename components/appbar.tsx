@@ -41,12 +41,20 @@ const Button: FunctionComponent<ButtonProps> = ({ href, name }) => {
   )
 }
 
-const Appbar: FunctionComponent= () => (
-  <div className={styles.wrapper}>
-    {
-      links.map((page) => <Button key={page.href} {...page} />)
-    }
-  </div>
-);
+const Appbar: FunctionComponent= () => {
+  const router = useRouter();
+  let classes = styles.wrapper;
+  if (router.pathname === '/workout') {
+    classes += ' ' + styles.hide;
+  }
+
+  return (
+    <div className={classes}>
+      {
+        links.map((page) => <Button key={page.href} {...page} />)
+      }
+    </div>
+  );
+};
 
 export default Appbar

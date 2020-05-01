@@ -3,10 +3,11 @@ import { FunctionComponent } from 'react';
 import styles from './page.module.scss';
 
 type Props = {
+  title: string
   scrollable?: boolean
 }
 
-const Page: FunctionComponent<Props> = ({ children, scrollable }) => {
+const Page: FunctionComponent<Props> = ({ children, scrollable, title }) => {
   let classes = styles.page;
   if (scrollable) {
     classes += ' ' + styles.scrollable;
@@ -15,6 +16,7 @@ const Page: FunctionComponent<Props> = ({ children, scrollable }) => {
   return (
     <>
       <Head>
+        <title>{`${title} - Ganzensport`}</title>
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-title" content="Ganzensport" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />

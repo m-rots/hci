@@ -33,7 +33,7 @@ const description = (position: number, points: number) => {
 
 const Person: FunctionComponent<Props> = ({ name, points, position, picture }) => (
   <div className={styles.wrapper}>
-    <img className={styles.image} src={picture} />
+    <img className={styles.image} src={picture} alt={`${name}'s profile picture`} />
     <div className={styles.text}>
       <span className={styles.name}>{name}</span>
       <span className={styles.description}>{description(position, points)}</span>

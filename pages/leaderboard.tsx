@@ -42,7 +42,7 @@ const page: NextPage = () => {
 
   return (
     <>
-      <Page scrollable>
+      <Page title="Leaderboard" scrollable>
         <Title>Leader<wbr/>board</Title>
         <Person {...friendsWithPosition[2]} />
         <Friends friends={friendsWithPosition} />
