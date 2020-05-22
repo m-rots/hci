@@ -20,8 +20,5 @@ Unable to start the server? The latest progress can always be found on https://h
 - Installable as a PWA on Android (untested) and iOS (tested on iOS 13.4).
 - Leaderboard is fully dynamic, everything is calculated and ordered based on the user's points.
 - Progress page displaying the current month, as well as the battlepass.
-- Some subtle animations
-
-### Still in work in progress
-- Your Workout page. Styling the slider is a pain across multiple browser vendors.
-- Rewards page
+- Fully working rewards page. Your account is a special one as you can have negative coins too!
+- Some subtle animations.

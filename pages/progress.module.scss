@@ -2,3 +2,24 @@
   display: flex;
   align-self: center;
 }
+
+.currentLevel {
+  font-size: 24px;
+  font-weight: 400;
+  margin: 30px 0 0;
+}
+
+.fancyTitle {
+  color: var(--color-psi);
+  font-size: 36px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.paragraph {
+  margin: 20px 0 0;
+}
+
+.extraPadding {
+  margin: 20px 0 80px;
+}

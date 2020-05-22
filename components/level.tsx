@@ -6,16 +6,20 @@ type LevelInput = {
   number: number
   bonusCoins?: number
   done?: boolean
+  onClick?: () => void
 }
 
-const Level: FunctionComponent<LevelInput> = ({ name, number, bonusCoins, done }) => {
+const Level: FunctionComponent<LevelInput> = ({ name, number, bonusCoins, done, onClick }) => {
   let classes = styles.level  
   if (done) {
     classes += ' ' + styles.done
   }
+  if (onClick) {
+    classes += ' ' + styles.clickable
+  }
 
   return (
-    <div className={classes}>
+    <div className={classes} onClick={() => onClick && onClick()}>
       <span className={styles.number}>{number}</span>
       <span className={styles.name}>{name}</span>
       {

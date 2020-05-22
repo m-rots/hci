@@ -4,15 +4,9 @@ import styles from './page.module.scss';
 
 type Props = {
   title: string
-  scrollable?: boolean
 }
 
-const Page: FunctionComponent<Props> = ({ children, scrollable, title }) => {
-  let classes = styles.page;
-  if (scrollable) {
-    classes += ' ' + styles.scrollable;
-  }
-
+const Page: FunctionComponent<Props> = ({ children, title }) => {
   return (
     <>
       <Head>
@@ -23,7 +17,7 @@ const Page: FunctionComponent<Props> = ({ children, scrollable, title }) => {
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#7341E7"/>
       </Head>
-      <div className={classes}>
+      <div className={styles.page}>
         {children}
       </div>
     </>

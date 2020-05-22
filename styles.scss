@@ -3,6 +3,7 @@ body {
   background-color: var(--color-alpha);
   font-family: HelveticaNow;
   margin: 0;
+  user-select: none;
 }
 
 @font-face {

@@ -5,25 +5,82 @@ import Subtitle from 'components/subtitle';
 import Level from 'components/level';
 
 import styles from './progress.module.scss'
+import { useState } from 'react';
+
+const currentLevel = 3
+
+const levels = [
+  {
+    name: 'Doomed leg day',
+    done: true,
+  },
+  {
+    name: 'Sky high burpees',
+    done: true,
+    bonusCoins: 50,
+  },
+  {
+    name: 'Double trouble',
+    done: true,
+  },
+  {
+    name: 'Squad druple',
+    done: false,
+    bonusCoins: 200,
+  },
+  {
+    name: 'mad pushups',
+    done: false,
+  },
+  {
+    name: '100km sprint',
+    done: false,
+    bonusCoins: 500,
+  },
+  {
+    name: 'cinema ticket',
+    done: false,
+  },
+]
 
 const page: NextPage = () => {
   const today = new Date();
   const month = today.toLocaleString('en', { month: 'long' });
 
+  const [index, setIndex] = useState(currentLevel)
+
+  function previous() {
+    setIndex(index - 1)
+  }
+
+  function next() {
+    setIndex(index + 1)
+  }
+
   return (
     <>
       <Page title="Progress">
         <Title>{month}</Title>
-        <Subtitle>3 of 30 levels<br />completed</Subtitle>
+        <Subtitle>3 of {levels.length} levels<br />completed</Subtitle>
         <div className={styles.levels}>
-          <Level name="Doomed leg day" number={1} done />
-          <Level name="Sky high burpees" number={2} bonusCoins={50} done />
-          <Level name="Double trouble" number={3} done />
-          <Level name="Squad druple" number={4} bonusCoins={200} />
-          <Level name="mad pushups" number={5} />
-          <Level name="100km sprint" number={6} bonusCoins={500} />
-          <Level name="cinema ticket" number={7}/>
+          <Level {...levels[index - 1]} number={index} onClick={index > 0 && previous} />
+          <Level {...levels[index]} number={index + 1} />
+          <Level {...levels[index + 1]} number={index + 2} onClick={index < levels.length-1 && next} />
         </div>
+        <h3 className={styles.currentLevel}>current level</h3>
+        <h2 className={styles.fancyTitle}>Squaddruple</h2>
+        <p className={styles.paragraph}>
+          This level is all about squads!
+        </p>
+        <p className={styles.paragraph}>
+        As soon as you start the next exercise, you will
+        be greeted with four times the number of squad-
+        related exercises.
+        </p>
+        <p className={styles.extraPadding}>
+        As a bonus, you can earn an extra 200 coins to
+        spend on this month’s limited rewards in the shop!
+        </p>
       </Page>
     </>
   )

@@ -1,0 +1,38 @@
+.reward {
+  width: 200px;
+  height: 150px;
+
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: space-between;
+
+  border-radius: 15px;
+  margin-left: 20px;
+
+  text-align: center;
+  background-color: var(--color-beta);
+
+  cursor: pointer;
+}
+
+.product {
+  font-size: 24px;
+}
+
+.company, .coins, .amount {
+  font-size: 14px;
+}
+
+.company {
+  margin-top: 10px;
+  color: var(--color-gamma);
+}
+
+.amount {
+  margin-bottom: 10px;
+}
+
+.coins {
+  color: var(--color-psi);
+}

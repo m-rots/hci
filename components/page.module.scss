@@ -10,8 +10,5 @@
   flex-direction: column;
 
   overflow: hidden;
-}
-
-.scrollable {
-  margin: 0 auto 50px;
+  max-width: 640px;
 }

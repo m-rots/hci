@@ -4,30 +4,37 @@ import Person from 'components/person';
 import Friends from 'components/friends';
 import Page from 'components/page';
 
+
+function me(name: string) {
+  return friendsWithPosition.find(
+    person => person.name === name,
+  )
+}
+
 const friends = [
   {
     name: 'Tha storminator',
-    points: 169,
+    points: 200,
     picture: '/images/storm.jpeg'
   },
   {
     name: 'Rent Hasfelt',
-    points: 148,
+    points: 150,
     picture: '/images/rens.jpeg'
   },
   {
     name: 'Wiskunde D',
-    points: 200,
+    points: 180,
     picture: '/images/alex.jpeg'
   },
   {
     name: 'Jay9',
-    points: 180,
+    points: 170,
     picture: '/images/jeanine.jpeg'
   },
   {
     name: 'Ka-Ho',
-    points: 152,
+    points: 145,
     picture: '/images/ka-ho.jpeg'
   },
 ];
@@ -42,9 +49,9 @@ const page: NextPage = () => {
 
   return (
     <>
-      <Page title="Leaderboard" scrollable>
+      <Page title="Leaderboard">
         <Title>Leader<wbr/>board</Title>
-        <Person {...friendsWithPosition[2]} />
+        <Person {...me('Tha storminator')} />
         <Friends friends={friendsWithPosition} />
       </Page>
     </>
