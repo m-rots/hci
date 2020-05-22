@@ -5,6 +5,7 @@ import Duration from 'components/duration';
 import Transport from 'components/transport';
 
 import styles from './workout.module.scss';
+import Link from 'next/link';
 
 const page: NextPage = () => {
 
@@ -14,7 +15,9 @@ const page: NextPage = () => {
         <Title>Your workout</Title>
         <Transport />
         <Duration />
-        <button className={styles.button}>Start</button>
+        <Link href="/levelup">
+          <button className={styles.button}>Start</button>
+        </Link>
       </Page>
     </>
   )

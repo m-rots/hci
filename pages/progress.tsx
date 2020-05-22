@@ -29,7 +29,7 @@ const levels = [
     bonusCoins: 200,
   },
   {
-    name: 'mad pushups',
+    name: 'Mad pushups',
     done: false,
   },
   {
@@ -38,7 +38,7 @@ const levels = [
     bonusCoins: 500,
   },
   {
-    name: 'cinema ticket',
+    name: 'Cinema ticket',
     done: false,
   },
 ]
