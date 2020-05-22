@@ -1,6 +1,6 @@
 import { NextPage } from 'next';
-import Title from '../components/title';
-import Page from '../components/page';
+import Title from 'components/title';
+import Page from 'components/page';
 
 const page: NextPage = () => {
 

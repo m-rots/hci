@@ -1,0 +1,54 @@
+.level {
+  width: 200px;
+  height: 300px;
+
+  flex-shrink: 0;
+
+  margin: 50px 10px 0;
+  background-color: var(--color-beta);
+  border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  word-break: normal;
+  color: var(--color-psi);
+  font-size: 36px;
+  text-align: center;
+
+  margin: 40px 10px 0;
+}
+
+.number {
+  font-size: 24px;
+  color: var(--color-gamma);
+  margin: 10px 15px 0px auto;
+}
+
+.coins {
+  color: white;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: 15px;
+}
+
+.amount {
+  display: block;
+  font-size: 16px;
+}
+
+.bonus {
+  display: block;
+  color: var(--color-psi);
+  font-size: 14px;
+}
+
+.done {
+  background-color: var(--color-psi);
+
+  .name, .number, .bonus, .amount {
+    color: var(--color-beta);
+  }
+}

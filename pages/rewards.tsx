@@ -1,7 +1,7 @@
 import { NextPage } from 'next';
-import Title from '../components/title';
-import Page from '../components/page';
-import Subtitle from '../components/subtitle';
+import Title from 'components/title';
+import Page from 'components/page';
+import Subtitle from 'components/subtitle';
 
 const page: NextPage = () => {
 

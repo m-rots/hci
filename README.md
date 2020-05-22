@@ -19,12 +19,9 @@ Unable to start the server? The latest progress can always be found on https://h
 - Navigation bar component global for all pages (enables animations)
 - Installable as a PWA on Android (untested) and iOS (tested on iOS 13.4).
 - Leaderboard is fully dynamic, everything is calculated and ordered based on the user's points.
+- Progress page displaying the current month, as well as the battlepass.
 - Some subtle animations
 
 ### Still in work in progress
 - Your Workout page. Styling the slider is a pain across multiple browser vendors.
-- Progress & Rewards pages
-
-### Future work
-- Actual workout routine (incl. map, point of interest and exercise pages)
-- Adding friends (not persistent)
+- Rewards page

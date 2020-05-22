@@ -1,8 +1,8 @@
 import { NextPage } from 'next';
-import Page from '../components/page';
-import Title from '../components/title';
-import Duration from '../components/duration';
-import Transport from '../components/transport';
+import Page from 'components/page';
+import Title from 'components/title';
+import Duration from 'components/duration';
+import Transport from 'components/transport';
 
 import styles from './workout.module.scss';
 

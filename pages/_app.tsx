@@ -1,7 +1,7 @@
 import '../styles.scss'
 
 import { AppProps } from 'next/app'
-import Appbar from '../components/appbar'
+import Appbar from 'components/appbar'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

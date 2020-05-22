@@ -1,8 +1,8 @@
 import { NextPage } from 'next';
-import Title from '../components/title';
-import Person from '../components/person';
-import Friends from '../components/friends';
-import Page from '../components/page';
+import Title from 'components/title';
+import Person from 'components/person';
+import Friends from 'components/friends';
+import Page from 'components/page';
 
 const friends = [
   {
